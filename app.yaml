@@ -1,0 +1,43 @@
+application: mysds-1230
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+  application_readable: true
+
+- url: /(.+\.php)$
+  script: \1
+
+- url: /css
+  static_dir: css
+
+- url: /assets
+  static_dir: assets
+
+- url: /js
+  static_dir: js
+
+- url: /libs
+  static_dir: libs
+
+- url: .*
+  script: main.php
+
+- url: /(.*\.sass)
+  mime_type: text/css
+  static_files: static
+  upload: css/(.*\.sass)
+
+- url: /(.*\.map)
+  mime_type: text/css
+  static_files: static
+  upload: css/(.*\.map)

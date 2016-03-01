@@ -1,0 +1,256 @@
+/*==========  Desktop First Method  ==========*/
+@keyframes flickerAnimation {
+  0%   { text-shadow:0 2px 19px rgba(215, 2, 6, 1); }
+  50%  { text-shadow:0 2px 19px rgba(215, 2, 6, 0.2); }
+  100% { text-shadow:0 2px 19px rgba(215, 2, 6, 1); }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px) {
+	
+	.user_icon span {
+		font-size: 30px;
+	    opacity: 0.3;
+	}
+	.user_icon_blc {
+		left: 500px;
+    	top: 520px;
+	}
+	.option_list {
+    	top: -570px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.food_bar {
+		top: -13px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+@-o-keyframes flickerAnimation{
+  0%   { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+  50%  { text-shadow:0 3px 9px rgba(215, 2, 6, 0.2); }
+  100% { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+  50%  { text-shadow:0 3px 9px rgba(215, 2, 6, 0.2); }
+  100% { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+  50%  { text-shadow:0 3px 9px rgba(215, 2, 6, 0.2); }
+  100% { text-shadow:0 3px 9px rgba(215, 2, 6, 1); }
+}
+
+	.user_info_block {
+		width: 90%;
+		font-size: 13px;
+		padding: 20px;
+	}
+	.user_icon_page {
+		font-size: 30px;
+	}
+	.chart_info_title {
+		display: none;
+	}
+	.main_block {
+		margin-top: 5px;
+		font-size: 12px;
+	}
+	.main_block2 {
+		margin-top: 15px;
+	}
+	.food_bar {
+		top: -13px;
+	}
+	.main_info_blc {
+		padding-top: 10px;
+	}
+	.task_input_div #descr_task {
+		height: 80px;
+	}
+	.form_container {
+		width: 500px;
+		margin-top: 20px;
+	}
+	.option_list {
+		top: -350px	
+	}
+	.edit_user_option {
+		font-size: 18px;
+		margin-top: 3px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.user_icon span {
+		font-size: 30px;
+	    opacity: 0.3;
+	}
+	.user_icon_blc {
+		left: 64px;
+    	top: 345px;
+	}
+	.food_bar {
+		top: -71px;
+	}
+	.fa_status_icon {
+		top: -1px;
+	}
+	.task_input_div #descr_task {
+		height: 150px;
+	}
+	.form_container {
+		width: 300px;
+	}
+	.option_list {
+		top: -440px	
+	}
+	.option_list {
+		width: auto
+	}
+
+}
+
+/* Custom, iPhone 6 */
+@media only screen and (max-width : 375px) {
+	.background {
+		background-image: url("/wp-content/themes/sds/img/bg375.jpg");
+	}
+	.main_block {
+		margin-top: 10px;
+	}
+	.background_status {
+		background-image: url("/wp-content/themes/sds/img/bg_status375.jpg");
+	}
+	.info_user3 {
+		height: 160px;
+	}
+	.w_progress	{
+		top: -142px;
+	}
+	.r_progress	{
+		top: -167px;
+	}
+	.main_info_blc {
+		padding-top: 100px;
+	}
+	table, td, th {
+		font-size: 5px;
+	}
+	.project_start {
+		height: 23px;
+		width: 23px;
+	}
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.user_icon_blc {
+		left: 34px;
+    	top: 345px;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	
+}
+
+/* Custom, iPhone 6 */
+@media only screen and (min-width : 375px) {
+	
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.user_info_block {
+		width: 60%;
+	}
+	.option_list  th {
+		font-size: 18px;
+	}
+	.option_list  td {
+		max-width: 350px;
+		font-size: 14px;
+		min-width: 50px;
+	}
+	.option_list {
+		top: -590px;
+	}
+	.task_input, .user-error {
+		height: 40px;
+		font-size: 14px;
+	}
+	.form_container {
+		width: 700px;
+	}
+	.submit_project_btn {
+		font-size: 18px;
+    	height: 50px;
+	}
+	.form_container #descr_project {
+		padding-top: 10px;
+		height: 80px;
+	}
+	#status_icon_trigger, .fa_status_icon {
+		text-shadow: 0 2px 19px rgba(0, 0, 0, 0.5);
+	}
+	.form_task_btn {
+		font-size: 18px;
+		height: 50px;
+	}
+	.ct-line {
+		stroke-width: 5px;
+	}
+	.ct-point {
+		stroke-width: 15px;
+	}
+	.btn_style_1 {
+		font-size: 18px;
+   		height: 50px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.info_user {
+		margin-top: 35px
+	}
+	.user_info_block {
+		width: 40%;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1300px) {
+	.option_list {
+    	top: -570px;
+	}
+}
+

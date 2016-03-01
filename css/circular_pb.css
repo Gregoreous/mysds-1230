@@ -1,0 +1,315 @@
+@-webkit-keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+@-moz-keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+@keyframes 
+load { 0% {
+stroke-dashoffset:0
+}
+}
+
+html {
+font-size: 10px;
+}
+
+.circle_bar>li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93A2AC;
+  font-family: Lato;
+  font-weight: 100;
+  margin: 2rem 1rem;
+  opacity: 0.1;
+}
+
+/*.main_info_blc>.current_status>li {
+  color: #D70206;
+}
+*/
+.circle_bar>li:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400;
+}
+
+.circle_bar>li:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.circle_bar svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+.circle_bar svg {
+  width: 100%;
+  height: 100%;
+}
+
+.eff svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 35;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 1);
+  -webkit-animation: load 8s;
+  -moz-animation: load 8s;
+  -o-animation: load 8s;
+  animation: load 8s;
+}
+
+.day svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 1);
+  -webkit-animation: load 5s;
+  -moz-animation: load 5s;
+  -o-animation: load 5s;
+  animation: load 5s;
+}
+
+.work_count svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 0.85);
+  -webkit-animation: load 5s;
+  -moz-animation: load 5s;
+  -o-animation: load 5s;
+  animation: load 5s;
+}
+
+.break_count svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 0.85);
+  -webkit-animation: load 5s;
+  -moz-animation: load 5s;
+  -o-animation: load 5s;
+  animation: load 5s;
+}
+
+.level svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 85;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 0.9);
+  -webkit-animation: load 5s;
+  -moz-animation: load 5s;
+  -o-animation: load 5s;
+  animation: load 5s;
+}
+
+.current_status svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 195;
+  stroke-dasharray: 629; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 1);
+  -webkit-animation: load 5s;
+  -moz-animation: load 5s;
+  -o-animation: load 5s;
+  animation: load 5s;
+}
+
+.status svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 38;
+  stroke-dasharray: 150; /*629 - 100%*/
+  stroke: rgba(255, 255, 255, 1);
+}
+
+/*Вращение */
+.status>li {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+ 
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+/*Линии*/
+.eff>li {
+	opacity: 0.1;
+}
+
+.day>li {
+	opacity: 0.5;
+	width: 230px;
+	top: 35px;
+  left: -3px;
+  height: 230px;
+}
+
+.work_count>li {
+  opacity: 0.3;
+  width: 210px;
+  top: 35px;
+  left: -3px;
+  height: 230px;
+}
+
+.break_count>li {
+  opacity: 0.3;
+  width: 190px;
+  top: 35px;
+  left: -3px;
+  height: 230px;
+}
+
+.level>li {
+	opacity: 0.3;
+	width: 150px;
+	top: 75px;
+  left: -3px;
+  height: 150px;
+}
+
+.current_status>li {
+  opacity: 0.4;
+  width: 67px;
+  top: 75px;
+  left: -3px;
+  height: 150px;
+}
+
+.status>li {
+  opacity: 0.3;
+  width: 75px;
+  top: 110px;
+  left: -3.5px;
+  height: 80px;
+}
+
+@media only screen and (min-width : 768px) {
+  .info {
+    opacity: 0.6;
+  }
+  .eff>li {
+    width: 500px;
+    height: 500px;
+  }
+  .day>li {
+    width: 391px;
+    height: 391px;
+    top: 55px;
+  }
+  .level>li {
+    width: 255px;
+    height: 255px;
+    top: 120px;
+  }
+  .current_status>li {
+    width: 130px;
+    height: 130px;
+    top: 183px;
+  }
+  .status>li {
+    width: 142px;
+    height: 142px;
+    top: 177px;
+  }
+  .break_count>li {
+    width: 323px;
+    height: 323px;
+    top: 87px;
+  }
+  .work_count>li {
+    width: 358px;
+    height: 358px;
+    top: 70px;
+  }
+  .main_info_blc .status_icon {
+    top: 229px;
+    font-size: 58px;
+  }
+  .level_circle {
+    top: 38px;
+    font-size: 70px;
+  }
+  .main_info_blc .level_user_num {
+    top: 143px;
+  }
+  .main_info_blc .level_user {
+    font-size: 40px;
+  }
+  .switch_status_icon>.health_btn_status {
+    left: 160px;
+    top: -50px;
+  }
+  .fa_status_icon {
+    left: -7px;
+  }
+  .assets_btn_status {
+    top: -100px;
+  }
+  .other_btn_status {
+    top: 100px;
+  }
+  .switch_status_icon>.sleep_btn_status {
+    left: -180px;
+    top: -50px;
+  }
+  .switch_status_icon>.daily_btn_status {
+    left: -160px;
+    top: 50px;
+  }
+  .switch_status_icon>.current_btn_status {
+    left: 160px;
+    top: 50px;
+  }
+}
+
+/*Линии---*/
